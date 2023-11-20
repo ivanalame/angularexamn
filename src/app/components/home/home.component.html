@@ -1,0 +1,22 @@
+<div>
+    <h1>home</h1>
+    <table class="table table-success">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Marca</th>
+                <th>Imagen</th>
+                    <th>detalle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cub of cubos">
+                <td>{{cub.nombre}}</td>
+                <td>{{cub.marca}}</td>
+                <td><img src="{{cub.imagen}}" style="width: 150px; height: 150px;"></td>
+                <td> <button [routerLink]="['/valoracion', cub.idCubo]" style="background-color: green; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px;">Detalles y Valoracion</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

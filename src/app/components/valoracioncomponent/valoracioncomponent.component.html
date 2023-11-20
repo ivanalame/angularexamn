@@ -1,0 +1,17 @@
+<div>
+    <div class="card shadow-lg p-3">
+        <img src="{{cuboDetalle.imagen}}" style="width: 150px; height: 150px;" alt="Imagen" class="mx-auto d-block">
+        <h1>Nombre: {{cuboDetalle.nombre}}</h1>
+        <h1>Marca: {{cuboDetalle.marca}}</h1>
+        <h1>Comentarios</h1>
+        <ul>
+            <li *ngFor="let com of ComentariosCubo">Usuario {{com.idUsuario}}: {{com.comentario}} <br>{{com.fechaComentario}}</li>
+        </ul>
+        <button [routerLink]="['/']" style="background-color: green; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px;">Volver a home</button> 
+        <br>
+        <br>
+       <button [routerLink]="['/marcascubo', cuboDetalle.marca]" style="background-color: green; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px;">Volver a cubos de la marca {{cuboDetalle.marca}}</button> 
+
+      </div>
+      
+</div>
