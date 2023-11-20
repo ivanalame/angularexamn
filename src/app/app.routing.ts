@@ -7,6 +7,7 @@ import { LoginComponent } from "./components/login/login.component";
 import { RegistroComponent } from "./components/registro/registro.component";
 import { PerfilComponent } from "./components/perfil/perfil.component";
 import { ComprasComponent } from "./components/compras/compras.component";
+import { InsertCompraComponent } from "./components/insert-compra/insert-compra.component";
 
 const appRoutes : Routes  =[
     {path : "", component: HomeComponent},
@@ -16,6 +17,7 @@ const appRoutes : Routes  =[
     {path : "register", component: RegistroComponent},
     {path : "perfil/:token", component: PerfilComponent},
     {path : "compras/:token", component: ComprasComponent},
+    {path : "insertcompra/:token", component: InsertCompraComponent},
 
 ]
 

@@ -1,0 +1,11 @@
+<div>
+    <h1>Insertar Comppra </h1>
+    <form #loginForm="ngForm"> 
+
+        <select #selectcubo >
+            <option *ngFor="let cub of cubos" value="{{cub.idCubo}}">{{cub.nombre}}</option>
+        </select>
+    
+    <button (click)="insertcompra()">Comprar Cubo</button>
+    </form>
+</div>

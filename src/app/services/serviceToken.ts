@@ -32,4 +32,16 @@ export class ServiceToken {
         var header = new HttpHeaders().set('Authorization', 'bearer ' +token);
         return  this._http.get(url, {headers: header})
     }
+
+    postCompra(id: any, token: any): Observable<any> {
+        var request = "api/Compra/InsertarPedido/" + id;
+        var url = environment.urlexamen + request;
+      
+        var headers = new HttpHeaders()
+          .set("Content-type", "application/json")
+          .set('Authorization', 'bearer ' + token);
+      
+        return this._http.post(url, null, { headers: headers });
+      }
+      
 }

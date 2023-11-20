@@ -18,6 +18,7 @@ import { RegistroComponent } from './components/registro/registro.component';
 import { __importStar } from 'tslib';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { ComprasComponent } from './components/compras/compras.component';
+import { InsertCompraComponent } from './components/insert-compra/insert-compra.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ComprasComponent } from './components/compras/compras.component';
     LoginComponent,
     RegistroComponent,
     PerfilComponent,
-    ComprasComponent
+    ComprasComponent,
+    InsertCompraComponent
   ],
   imports: [
     BrowserModule,routing,FormsModule,HttpClientModule
