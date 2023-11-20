@@ -1,0 +1,19 @@
+<div>
+    <h1>Log in</h1>
+    <form #loginForm="ngForm"> 
+        <label >Nombre</label>
+        <input type="text" id="cajanombre" #cajanombre name="cajanombre">
+        <label >password</label>
+        <input type="text" id="cajapassword"  #cajapassword name="cajapassword">
+      
+    <button (click)="postLogin()">login</button>
+    </form>
+
+    <div *ngIf="token">
+        <button [routerLink]="['/perfil', token]" style="background-color: green; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px;">Ver Perfil</button>
+
+        <button [routerLink]="['/compras', token]" style="background-color: green; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px;">Ver Compras</button>
+
+        <button>Realizar  Compras</button>
+    </div>
+</div>
